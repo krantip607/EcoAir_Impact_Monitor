@@ -39,8 +39,13 @@ st.sidebar.title("📡 AUDIT CONTROL")
 
 # These inputs now link directly to Session State
 st.session_state['city'] = st.sidebar.text_input("📍 TARGET CITY", value=st.session_state['city'])
-st.session_state['token'] = st.sidebar.text_input("🔑 API TOKEN", value=st.session_state['token'], type="password")
-
+# Check if the key exists in Secrets first, otherwise use the sidebar input
+if "OPENWEATHER_API_KEY" in st.secrets:
+    st.session_state['token'] = st.secrets["OPENWEATHER_API_KEY"]
+else:
+    # This keeps the manual box visible only if the Secret is missing
+    st.session_state['token'] = st.sidebar.text_input("🔑 API TOKEN", value=st.session_state.get('token', ''), type="password")
+    
 # Button to manually refresh or change data
 if st.sidebar.button("🔄 RE-SYNC AUDIT"):
     st.session_state['city_data'] = get_live_data(st.session_state['city'], st.session_state['token'])
