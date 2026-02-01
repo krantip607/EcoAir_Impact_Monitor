@@ -96,15 +96,6 @@ if 'city_data' in st.session_state and st.session_state['city_data'] is not None
     st.plotly_chart(fig2, use_container_width=True)
     
     st.info("Audit Logic: Translating particulate concentration into physiological tissue load.")
-    st.markdown("---")
-    st.subheader("📢 AI Auditor Recommendation")
-    if pm25 > 35:
-        st.error("🚨 **High Alert:** Reduce outdoor activity. Authorities should consider traffic restrictions.")
-    else:
-        st.success("✅ **Safe Zone:** Air quality is within acceptable biological limits.")
-
-# This 'else' (Line 106) must be at the FAR LEFT, aligned with the 'if' at the start of your file
-else:
-    st.warning("⚠️ AUDIT STANDBY: Please enter your Token and City on the Main Page first.")
+    
 else:
     st.warning("⚠️ AUDIT STANDBY: Please enter your Token and City on the Main Page first.")
