@@ -48,3 +48,14 @@ streamlit run app.py
 * *AR Integration*: Visualizing pollutant clouds over city landmarks using Augmented Reality.
 * *Predictive Modeling*: Using LSTM neural networks to forecast pollution spikes.
 * *Policy Automation*: Generating automated climate-action briefs for municipal governments.
+
+---
+
+## 👥 Meet the Team
+* **1] Rutuja Shinde** – *Data Systems & API Engineering*
+* **2] Kranti Pawar** – *Software Architecture & Deployment*
+* **3] Purva More** – *Environmental Research & Fiscal Modeling*
+* **4] Aditi Takwane** – *UI/UX Design & Documentation*
+
+---
+*This project was developed for the **AR for Earth** Hackathon. We contributed equally to the research, development, and testing of the Triple-Audit Framework.*
