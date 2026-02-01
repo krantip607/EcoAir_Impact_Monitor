@@ -97,8 +97,6 @@ if 'city_data' in st.session_state and st.session_state['city_data'] is not None
     
     st.info("Audit Logic: Translating particulate concentration into physiological tissue load.")
     st.markdown("---")
-    st.info("Audit Logic: Translating particulate concentration into physiological tissue load.")
-    st.markdown("---")
     st.subheader("📢 AI Auditor Recommendation")
     if pm25 > 35:
         st.error("🚨 **High Alert:** Reduce outdoor activity. Authorities should consider traffic restrictions.")
